@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import React, {  ReactNode } from "react";
+import { ReactNode } from "react";
 import { Compass, Navigation } from "react-feather";
 import { PProps } from "react-html-props";
 
@@ -46,4 +46,3 @@ const RightInfo = () => {
 };
 
 export { RightInfo };
-
