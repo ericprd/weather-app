@@ -8,7 +8,7 @@ It is just Weather App, don't expect anything!
 
 Production:
 
-- `https://weather-app-ericprd.vercel.app`
+- `https://weather-app.ericprd.work/`
 
 Local:
 
