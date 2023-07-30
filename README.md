@@ -2,11 +2,7 @@
 
 It is just Weather App, don't expect anything!
 
-<div style="text-align: center;"><img src="./weather-app.png" alt="weather-app" style="width: 120px;" /></div>
-
-## References
-
-- https://gramedia.com
+<img src="./weather-app.png" alt="weather-app" style="width: 120px;" />
 
 ## Links
 
@@ -33,6 +29,7 @@ Local:
   - Prettier
   - ESLint
   - Vite
+  - Shadcn/ui
 
 ## Development
 
@@ -65,3 +62,9 @@ Start in production mode:
 ```sh
 npm run preview
 ```
+
+## Credits
+
+- OpenWeatherMap https://openweathermap.org/api
+- Ninja Api https://api-ninjas.com/api/city
+- Shadcn/ui https://ui.shadcn.com
