@@ -30,6 +30,7 @@ Local:
   - ESLint
   - Vite
   - Shadcn/ui
+  - Zustand
 
 ## Development
 
