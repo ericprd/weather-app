@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import MainStore from "@/store/main.store";
 import { ReactNode } from "react";
 import { Compass, Navigation } from "react-feather";
 import { PProps } from "react-html-props";
@@ -23,16 +24,17 @@ const DetailInfo = (p: detailProps & PProps) => {
 };
 
 const Info = () => {
+	const { currentWeather } = MainStore(state => ({ currentWeather: state.currentWeather }));
 	return (
 		<>
-			<DetailInfo iconElm={<Navigation className="w-full h-full" />} iconClassName="h-5 w-5" className="md:text-2xl">5.1 m/s WSW</DetailInfo>
-			<DetailInfo iconElm={<Compass className="w-full h-full" />} iconClassName="h-5 w-5" className="md:text-2xl">1010hPa</DetailInfo>
+			<DetailInfo iconElm={<Navigation className="w-full h-full" />} iconClassName="h-5 w-5" className="md:text-2xl">{currentWeather.windSpeed} m/s WSW</DetailInfo>
+			<DetailInfo iconElm={<Compass className="w-full h-full" />} iconClassName="h-5 w-5" className="md:text-2xl">{currentWeather.pressure}hPa</DetailInfo>
 			<DetailInfo>
-				<span className="mr-3 md:text-2xl">Humidity: 47%</span>
-				<span className="md:text-2xl">UV: 3</span>
+				<span className="mr-3 md:text-2xl">Humidity: {currentWeather.humidity}%</span>
+				<span className="md:text-2xl">UV: {currentWeather.uvi}</span>
 			</DetailInfo>
-			<DetailInfo className="md:text-2xl">Dew point: 10 C</DetailInfo>
-			<DetailInfo className="md:text-2xl">Visibility: 10.0km</DetailInfo>
+			<DetailInfo className="md:text-2xl">Dew point: {currentWeather.dew}°C</DetailInfo>
+			<DetailInfo className="md:text-2xl">Visibility: {currentWeather.visibility}km</DetailInfo>
 		</>
 	);
 };
