@@ -68,3 +68,4 @@ npm run preview
 - OpenWeatherMap https://openweathermap.org/api
 - Ninja Api https://api-ninjas.com/api/city
 - Shadcn/ui https://ui.shadcn.com
+- Lorem Picsum https://picsum.photos/
