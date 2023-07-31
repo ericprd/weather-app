@@ -27,7 +27,7 @@ const Info = () => {
 	const { currentWeather } = MainStore(state => ({ currentWeather: state.currentWeather }));
 	return (
 		<>
-			<DetailInfo iconElm={<Navigation className="w-full h-full" />} iconClassName="h-5 w-5" className="md:text-2xl">{currentWeather.windSpeed} m/s WSW</DetailInfo>
+			<DetailInfo iconElm={<Navigation className="w-full h-full" />} iconClassName="h-5 w-5" className="md:text-2xl">{currentWeather.windSpeed} m/s</DetailInfo>
 			<DetailInfo iconElm={<Compass className="w-full h-full" />} iconClassName="h-5 w-5" className="md:text-2xl">{currentWeather.pressure}hPa</DetailInfo>
 			<DetailInfo>
 				<span className="mr-3 md:text-2xl">Humidity: {currentWeather.humidity}%</span>
