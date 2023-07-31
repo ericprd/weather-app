@@ -110,8 +110,8 @@ function App() {
     <>
       <Toaster position="top-center" />
       <main className="bg-black relative p-2 min-h-screen" style={{ backgroundImage: 'url("https://picsum.photos/2160")', backgroundSize: 'cover' }}>
-        <div className="justify-end mb-5 hidden sm:flex w-full md:scale-100">
-          <form className="hidden sm:block w-full lg:w-fit" onSubmit={submitHandler}>
+        <div className="fixed left-0 right-0 p-2 bottom-0 sm:p-0 sm:static justify-end sm:mb-5 sm:flex">
+          <form className="sm:block w-full lg:w-fit" onSubmit={submitHandler}>
             <TextInput onChange={setCity} value={city} placeholder="Search city" containerClassName="lg:max-w-lg" />
           </form>
         </div>
@@ -138,13 +138,9 @@ function App() {
             )}
           </div>
         </div>
-
-        <form className="p-2 fixed bottom-0 left-0 sm:hidden w-full" onSubmit={submitHandler}>
-          <TextInput onChange={setCity} value={city} placeholder="Search city" />
-        </form>
       </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
